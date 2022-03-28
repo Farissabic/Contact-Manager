@@ -1,0 +1,34 @@
+
+nav{
+    background: white;
+    height: 6rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 0;
+    width: 100%;  
+    position: fixed;
+    box-shadow: 0 0 5rem rgb(0, 0, 0); 
+}
+
+nav .container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+}
+
+nav .container h3{
+    color:  #387DD8;
+    text-decoration: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+nav .container h3 i{
+    font-size: 2.5rem;
+}

@@ -1,0 +1,30 @@
+<div class="section">
+    <div class="container">
+        <h3>Add Contact</h3>
+        <form #myForm="ngForm" (submit)="createContact()" >
+            <input #email="ngModel" [(ngModel)]="contact.name" name="name" type="text" placeholder="Name" required="true">
+            <span *ngIf="!email.valid && email.touched">please eneter the Name</span>
+            <input [(ngModel)]="contact.email" name="email" type="email" placeholder="Email">
+            <input [(ngModel)]="contact.photo" name="photoUrl" type="text" placeholder="Photo Url">
+            <input #mobile="ngModel" [(ngModel)]="contact.mobile" name="mobile" type="number" placeholder="Mobile" required>
+            <span *ngIf="!mobile.valid && mobile.touched">please eneter the Mobile</span>
+            <input [(ngModel)]="contact.company" name="company" type="text" placeholder="Company">
+            <input [(ngModel)]="contact.title" name="title" type="text" placeholder="Title">
+            
+            <select *ngIf="groups.length > 0"
+                    [(ngModel)]="contact.groupId" 
+                    name="groupId" 
+                    required="true"
+                    >
+                <option *ngFor="let group of groups"
+                        [value]="group.id"  required="true">{{group.name}}</option>
+            </select>
+            <div class="options">
+                <input [disabled]="!myForm.valid" class="btn" type="submit" value="Create">
+                <a routerLink="/">Close</a>
+            </div>
+            <span class="waring" *ngIf="!myForm.valid && myForm.touched">Please eneter the required fields: Name , Group  </span>
+        </form>
+    </div>
+</div>
+

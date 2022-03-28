@@ -1,1 +1,60 @@
 /* You can add global styles to this file, and also import other style files */
+
+*{
+    list-style: none  !important;
+    text-decoration: none  !important;
+    box-sizing: border-box  !important;
+    max-width: 100vw  !important;
+}
+
+
+
+html{
+    font-size: 15px  !important;
+    scroll-behavior: smooth  !important;
+}
+
+body{
+    margin: 0  !important;
+    padding: 0  !important;
+    outline: 0  !important;
+    border: 0  !important;
+    list-style: none  !important;
+    text-decoration: none  !important;
+    font-family: 'Ubuntu', sans-serif !important;
+    background:  #387DD8 !important ;
+    max-width: 100vw  !important;
+
+}
+
+h1,h2,h3,h4,h5{
+    line-height: 1.2  !important;
+}
+
+h1{
+    font-size: 3.8rem  !important;
+}
+h2{
+    font-size: 2.6rem  !important;
+}
+h3{
+    font-size: 1.6rem  !important;
+}
+h4{
+    font-size: 1.2rem  !important;
+}
+
+p{
+    line-height: 1.8 !important ;
+}
+
+.container{
+    width: 80% !important;
+    margin: 0 auto !important;
+}
+
+.section{
+    padding: 10rem 0 7rem !important;
+    max-width: 100vw !important;
+    overflow-x: hidden !important;
+}

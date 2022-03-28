@@ -1,0 +1,47 @@
+<div class="section">
+
+    <div class="container">
+  
+        <div class="addNew">
+           <h3>NG Contacts </h3>
+           <a class="btn" routerLink="/contacts/add">
+               <i class="fa fa-plus-circle"></i> New
+           </a>
+        </div>
+   
+       <form>
+           <input [(ngModel)]="search" name="search" type="text " placeholder="Search User Name" >
+           <button (click)="SearchContact()"  class="searchB" >Search</button>
+        </form>
+
+
+       <div *ngIf="loading==true">
+           <app-spinner></app-spinner>
+       </div>
+
+       <div class="cards" >
+            <div class="card" *ngFor="let contact of contacts">
+                <div class="image">
+                <img src="{{contact.photo}}" alt="">
+                </div>
+                <ul>
+                    <li>Name : <span>{{contact.name}}</span></li>
+                    <li>Email : <span>{{contact.email}}</span></li>
+                    <li>Mobile : <span>{{contact.mobile}}</span></li>
+                </ul>
+                <div class="options">
+                    <a  routerLink="/contacts/view/{{contact.id}}"><i class="fa fa-eye"></i></a>
+                    <a  routerLink="/contacts/edit/{{contact.id}}"><i class="fa fa-pen"></i></a>
+                    <button (click)="contactDelete(contact.id)" ><i class="fa fa-trash-alt"></i></button>
+                </div>
+            </div>
+       </div>
+           
+
+           
+        
+
+    </div>  
+       
+   
+</div>

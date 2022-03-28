@@ -1,0 +1,26 @@
+<div class="section">
+    <h3>Edit Contact</h3>
+    <div class="container">
+        <form #f="ngForm" (submit)="UpdateContact()">
+            <input #name="ngModel" [(ngModel)]="contact.name" name="name" type="text" placeholder="Name" value="{{contact.name}}" required="true">
+            <span *ngIf="!name.valid && name.touched">Please Enter the Name</span>
+            <input [(ngModel)]="contact.email" name="email" type="email" placeholder="Email" value="{{contact.email}}">
+            <input [(ngModel)]="contact.photo" name="photo" type="text" placeholder="Photo Url" value="{{contact.photo}}">
+            <input #mobile="ngModel" [(ngModel)]="contact.mobile" name="mobile" type="number" placeholder="Mobile" value="{{contact.mobile}}" required>
+            <span *ngIf="!mobile.valid && mobile.touched">Please Enter the Name</span>
+            <input [(ngModel)]="contact.company" name="company" type="text" placeholder="Company" value="{{contact.company}}">
+            <input [(ngModel)]="contact.title" name="title" type="text" placeholder="Title" value="{{contact.title}}">
+            
+            <select  [(ngModel)]="contact.groupId" name="groupId" value="{{contact.groupId}}" required>
+                <option *ngFor="let group of groups" [value]="group.id" >{{group.name}}</option>
+            </select>
+            <div class="options">
+                <input class="btn" [disabled]="!f.valid" type="submit" value="Update">
+                <a routerLink="/">Close</a>
+            </div>
+        </form>
+        <div class="image">
+            <img src="{{contact.photo}}" alt="">
+        </div>
+    </div>
+</div>

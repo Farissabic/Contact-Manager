@@ -1,0 +1,74 @@
+.section .container h3{
+    color: white;
+}
+
+.section .container .profile{
+    display: flex;
+    align-items: center;
+    padding-bottom: 5rem ;
+    gap: 5rem;
+}
+
+.section .container .profile .image{
+    width: 20rem;
+    height: 20rem;
+    overflow: hidden;
+    border-radius: 50%;
+}
+
+.section .container .profile .image img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.section .container .profile ul{
+    width: 35rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 0;
+}
+
+.section .container .profile ul li{
+    padding: 1rem;
+    background: #ffffff;
+    width: 100%;
+    border-radius: .5rem;
+    color: #387DD8 ;
+}
+
+.section .container .profile ul li span{
+    font-weight: bold;
+}
+
+.section .container a{
+    padding: 1rem 2rem;
+    background: transparent;
+    color: white;
+    border: 3px solid white;
+    border-radius: .5rem;
+    transition: 300ms ease;
+}
+
+
+.section .container a:hover{
+   background: white;
+   color: #387DD8;
+}
+
+
+@media screen and (max-width:1000px){
+
+    .section .container .profile{
+        flex-direction: column;
+        align-items: center;
+        gap: 2rem;
+        padding-bottom: 1rem;
+    }
+
+    .section .container .profile ul{
+        width: 100%;
+    }
+
+}

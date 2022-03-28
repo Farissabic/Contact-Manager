@@ -1,0 +1,81 @@
+.section .container h3{
+    color: white;
+}
+
+.section .container form{
+    display: flex;
+    flex-direction: column;
+    width: 25rem;
+    gap: .5rem;
+    width: 40%;
+}
+
+.section .container form span{
+    color: white;
+}
+
+.section .container form span.waring{
+    color: white;
+    padding: 3rem;
+    background: rgb(219, 86, 86);
+    border-radius: .5rem;
+}
+
+.section .container form input,select{
+    border: none;
+    padding: 1rem;
+    border-radius: .5rem;
+    width: 100%;
+}
+
+.section .container form input.ng-invalid.ng-touched{
+    border: 3px solid rgb(201, 65, 65);
+}
+
+.section .container form input.btn{
+    width: fit-content;
+    background: #387DD8;
+    color: white;
+    border: 2px solid white;
+    cursor: pointer;
+    padding: 1rem 2rem;
+    transition: 300ms ease;
+}
+
+.section .container form input.btn:hover{
+    color: white;
+    border: 2px solid white;
+    background: white;
+    color: #387DD8;
+}
+
+
+.section .container form .options{
+    gap: 1rem;
+    display: flex;
+}
+
+.section .container form .options a{
+    background: #387DD8;
+    color: white;
+    border: 2px solid white;
+    border-radius: .5rem;
+    padding: 1rem 2rem;
+    transition: 300ms ease;
+}
+
+.section .container form .options a:hover{
+    color: white;
+    border: 2px solid white;
+    background: white;
+    color: #387DD8;
+}
+
+
+@media screen and (max-width:1200px){
+
+    .section .container form{
+        width: 100%;
+    }
+
+}

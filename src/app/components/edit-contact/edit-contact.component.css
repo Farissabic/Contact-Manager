@@ -1,0 +1,94 @@
+
+.section .container{
+    display: flex;
+    gap: 5rem;
+}
+
+
+.section h3{
+    color: white;
+    margin-left: 10%;
+}
+
+.section .container form{
+    display: flex;
+    flex-direction: column;
+    width: 30rem;
+    gap: .5rem;
+}
+
+.section .container form input,select{
+    border: none;
+    padding: 1rem;
+    border-radius: .5rem;
+}
+
+.section .container form span{
+    color: white;
+}
+
+.section .container form .options a{
+    padding: 1rem 2rem;
+    background: transparent;
+    color: white;
+    border: 3px solid white;
+    cursor: pointer;
+    border-radius: .5rem;
+    transition: 300ms ease;
+}
+
+.section .container form .options a:hover{
+    background: white;
+    color: #387DD8;
+}
+
+.section .container form .options input{
+    padding: 1rem 2rem;
+    background: transparent;
+    color: white;
+    border: 3px solid white;
+    cursor: pointer;
+    border-radius: .5rem;
+    transition: 300ms ease;
+}
+
+
+.section .container form .options input:hover{
+    background: white;
+    color: #387DD8;
+}
+
+.section .container form .options{
+    gap: 1rem;
+    display: flex;
+}
+
+
+.section .container .image{
+    width: 20rem;
+    height: 20rem;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.section .container .image img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+
+@media screen and (max-width:1000px){
+
+    .section .container{
+       flex-direction: column;
+       justify-content: center;
+       align-items: center;
+    }
+
+
+    .section .container form{
+        width: 100%;
+    }
+}
